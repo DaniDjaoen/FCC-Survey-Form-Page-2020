@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC - Survey Form Page</title>
+    <link rel="stylesheet" href="assets/styles/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+    <header>
+        <div id="individual-logo-div">
+            <img src="assets/images/fcc_secondary_large.svg" alt="logo">
+        </div>
+        <div id="survey-title-div">
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+        </div>
+        <div id="survey-description-div">
+            <p id="description">Thank you for taking the time to help us improve the platform.</p>
+        </div>
+    </header>
+    <main>
+        <form id="survey-form" action="/nowhere.html">
+            <label class="d-block-form-items" for="name" id="name-label">Name</label>
+            <input class="d-block-form-items" name="name" id="name" type="text" placeholder="Enter your name" required>
+
+            <label class="d-block-form-items m-top-form-items" for="email" id="email-label">Email</label>
+            <input class="d-block-form-items" type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label class="d-block-form-items m-top-form-items" for="number" id="number-label">Age</label>
+            <input class="d-block-form-items" type="number" name="age" id="number" placeholder="Age" min="12" max="65">
+
+            <label class="d-block-form-items m-top-form-items" for="role">Which option best describes your current role?</label>
+            <select id="dropdown" class="d-block-form-items" name="current-role" id="role" required>
+                <option value="none" selected disabled hidden>Select current role</option>
+                <option value="student">Student</option>
+                <option value="full time job">Full Time Job</option>
+                <option value="full time learner">Full Time Learner</option>
+                <option value="prefer not to say">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+
+            <fieldset class="d-block-form-items m-top-form-items">
+                <legend class="d-block-form-items">Would you recommend freeCodeCamp to a friend?</legend>
+                <div class="d-block-form-items">
+                    <input type="radio" name="recommend" id="definitely-radio-option" value="definitely">
+                    <label for="definitely-radio-option">Definitely</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="radio" name="recommend" id="maybe-radio-option" value="maybe">
+                <label for="maybe-radio-option">Maybe</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="radio" name="recommend" id="not-sure-radio-option" value="not sure">
+                <label for="not-sure-radio-option">Not sure</label>
+                </div>
+            </fieldset>
+
+            <label class="d-block-form-items m-top-form-items" for="favorite-feature">What is your favorite feature of freeCodeCamp?</label>
+            <select class="d-block-form-items" name="favorite-feature" id="favorite-feature">
+                <option value="none" selected disabled hidden>Select an option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="community">Community</option>
+                <option value="open source">Open Source</option>
+            </select>
+
+            <fieldset class="d-block-form-items m-top-form-items">
+                <legend class="d-block-form-items">What would you like to see improved? (Check all that apply)</legend>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="fep-checkbox-option" value="front-end projects">
+                <label for="fep-checkbox-option">Front-end Projects</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="dv-checkbox-option" value="data visualization">
+                <label for="dv-checkbox-option">Data Visualization</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="c-checkbox-option" value="challenges">
+                <label for="c-checkbox-option">Challenges</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="osc-checkbox-option" value="open source community">
+                <label for="osc-checkbox-option">Open Source Community</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="ghr-checkbox-option" value="gitter help rooms">
+                <label for="ghr-checkbox-option">Gitter help rooms</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="v-checkbox-option" value="videos">
+                <label for="v-checkbox-option">Videos</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="cm-checkbox-option" value="city meetups">
+                <label for="cm-checkbox-option">City Meetups</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="w-checkbox-option" value="wiki">
+                <label for="w-checkbox-option">Wiki</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="f-checkbox-option" value="forum">
+                <label for="f-checkbox-option">Forum</label>
+                </div>
+                <div class="d-block-form-items">
+                <input type="checkbox" name="improve" id="ac-checkbox-option" value="additional courses">
+                <label for="ac-checkbox-option">Additional Courses</label>
+                </div>
+            </fieldset>
+
+            <label class="d-block-form-items m-top-form-items" for="comments">Any comments or suggestion?</label>
+            <textarea class="d-block-form-items" name="comments" id="comments" rows="10"></textarea>
+            
+            <input id="submit" class="d-block-form-items m-top-form-items" type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <div id="survey-developer-notes"></div>
+        <div id="survey-developer">Website developed by Dani Djaoen</div>
+    </footer>
+    <!-- freeCodeCamp page tester
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    -->
+</body>
+</html>

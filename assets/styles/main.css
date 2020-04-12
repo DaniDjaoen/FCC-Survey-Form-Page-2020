@@ -1,0 +1,60 @@
+img {
+    width: 100%;
+}
+body {
+    background-image: url(/assets/images/background.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 40vw 50vw;
+    grid-template-areas:
+            "info form"
+            "footer footer";
+    padding-top: 30px;
+}
+header {
+    grid-area: info;
+    padding: 0 40px;
+}
+#individual-logo-div {
+    text-align: center;
+    margin-bottom: 25px;
+}
+#individual-logo-div img {
+    max-width: 20vw;
+}
+main {
+    grid-area: form;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 black;
+}
+legend {
+    font-size: initial;
+}
+#comments {
+    width: 100%;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px;
+    color: teal;
+}
+.d-block-form-items {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+.m-top-form-items {
+    margin-top: 25px;
+}
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 50px;
+    }
+}
